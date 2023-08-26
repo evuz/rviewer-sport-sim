@@ -4,10 +4,25 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && npm run serve",
+    "dev": "npm run build && run-p build:watch serve:watch",
+    "serve": "node dist/index.js",
+    "serve:watch": "node --watch dist/index.js --log-watch-compilation",
+    "build": "swc ./src -d dist",
+    "build:watch": "swc ./src -d dist --watch",
+    "type:check": "tsc src/index.ts --noEmit",
+    "type:check:watch": "tsc src/index.ts --noEmit --watch"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.80",
+    "chokidar": "^3.5.3",
+    "npm-run-all": "^4.1.5"
+  }
 }
