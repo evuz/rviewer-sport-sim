@@ -1,3 +1,3 @@
-import { hi } from "./hi.js";
+import { hi } from "./hi.js"
 
-hi();
+hi()
