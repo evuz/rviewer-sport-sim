@@ -1,4 +1,4 @@
-import { Controller, ServerResponse } from "../pkg/server"
+import { Controller, ServerResponse } from "@pkg/server"
 
 type Response = {
   ts: number

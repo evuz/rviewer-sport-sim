@@ -1,5 +1,6 @@
+import { Route, RouteMethod } from "@pkg/server"
+
 import { HealthController } from "../controllers/health.controller.js"
-import { Route, RouteMethod } from "../pkg/server/index.js"
 
 export class HealthRoute extends Route {
   static factory() {

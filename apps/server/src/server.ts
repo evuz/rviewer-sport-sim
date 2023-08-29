@@ -1,4 +1,5 @@
-import { ExpressServer } from "./pkg/server/index.js"
+import { ExpressServer } from "@pkg/server"
+
 import { HealthRoute } from "./routes/health.route.js"
 
 export function createServer() {

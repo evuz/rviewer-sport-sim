@@ -1,4 +1,4 @@
-import { LoggerFactory } from "../logger/index.js"
+import { LoggerFactory } from "@pkg/logger"
 
 import type { Server } from "./adapters/server.adapter"
 import type { Middleware, Controller } from "./server.types"

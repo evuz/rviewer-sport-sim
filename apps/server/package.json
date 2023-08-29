@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "npm run serve",
+    "dev": "npm run build:watch",
+    "build": "swc ./src -d dist",
+    "build:watch": "swc ./src -d dist --watch",
+    "serve": "node dist/index.js",
+    "serve:dev": "npm run serve:watch",
+    "serve:watch": "node --no-warnings --watch dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pkg/logger": "*",
+    "@pkg/server": "*"
+  },
+  "devDependencies": {}
+}

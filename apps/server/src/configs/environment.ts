@@ -1,4 +1,4 @@
-import { LogLevel } from "../pkg/logger/index.js"
+import { LogLevel } from "@pkg/logger"
 
 export const environment = {
   port: +(process.env.PORT || 8000),

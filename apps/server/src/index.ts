@@ -1,5 +1,6 @@
+import { LoggerFactory, NodeLogger } from "@pkg/logger"
+
 import { environment } from "./configs/environment.js"
-import { LoggerFactory, NodeLogger } from "./pkg/logger/index.js"
 import { createServer } from "./server.js"
 
 async function main() {
