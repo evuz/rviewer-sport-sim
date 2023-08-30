@@ -1,11 +1,19 @@
 import { ExpressServer } from "@pkg/server"
 
-import { HealthRoute } from "./routes/health.route.js"
+import { Routes } from "./routes/routes.factory.js"
+import { ControllersFactory } from "./controllers/controllers.factory.js"
 
-export function createServer() {
-  const server = new ExpressServer()
+export class Server {
+  static of() {
+    const server = new ExpressServer()
 
-  server.addRoute(HealthRoute.factory())
+    const ctrls = ControllersFactory.of()
+    const routes = Routes.of(ctrls)
 
-  return server
+    routes.forEach((route) => {
+      server.addRoute(route)
+    })
+
+    return server
+  }
 }

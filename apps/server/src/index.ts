@@ -1,14 +1,14 @@
 import { LoggerFactory, NodeLogger } from "@pkg/logger"
 
 import { environment } from "./configs/environment.js"
-import { createServer } from "./server.js"
+import { Server } from "./server.js"
 
 async function main() {
   try {
     const port = environment.port
 
     LoggerFactory.factory = (ctx: string) => NodeLogger.factory(environment.logLevel, ctx)
-    const server = createServer()
+    const server = Server.of()
 
     await server.listen(port)
 
