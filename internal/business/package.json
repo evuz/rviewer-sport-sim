@@ -1,0 +1,16 @@
+{
+  "name": "@internal/business",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "swc ./src -d dist",
+    "dev": "swc ./src -d dist --watch",
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "dependencies": {
+    "@pkg/logger": "*"
+  },
+  "devDependencies": {}
+}
