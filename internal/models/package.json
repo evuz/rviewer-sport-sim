@@ -1,5 +1,5 @@
 {
-  "name": "@internal/business",
+  "name": "@internal/models",
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -9,9 +9,6 @@
     "dev": "swc ./src -d dist --watch",
     "lint": "eslint \"**/*.ts*\""
   },
-  "dependencies": {
-    "@internal/models": "*",
-    "@pkg/logger": "*"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }

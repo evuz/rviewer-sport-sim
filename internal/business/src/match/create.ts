@@ -1,7 +1,9 @@
 import { LoggerFactory } from "@pkg/logger"
 
+import { Match } from "../../../models/src"
+
 type Params = {
-  startAt: number
+  startAt: Match["startAt"]
 }
 
 export class CreateMatchService {

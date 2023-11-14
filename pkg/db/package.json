@@ -1,5 +1,5 @@
 {
-  "name": "@internal/business",
+  "name": "@pkg/db",
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -10,8 +10,6 @@
     "lint": "eslint \"**/*.ts*\""
   },
   "dependencies": {
-    "@internal/models": "*",
-    "@pkg/logger": "*"
-  },
-  "devDependencies": {}
+    "mongodb": "^6.0.0"
+  }
 }
